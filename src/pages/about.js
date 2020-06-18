@@ -1,13 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 import Metadata from "../components/metadata"
-
-export default function Home() {
+export default function About() {
   return (
     <Layout>
-      <Metadata title="home" description="This is my home page" />
-      <h1>Home page</h1>
-      <p>I am David</p>
+      <Metadata title="about" description="This is my about page" />
+      <h1>About page</h1>
+      <p>About David Yao</p>
     </Layout>
   )
 }
