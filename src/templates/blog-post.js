@@ -14,7 +14,7 @@ export const query = graphql`
         description
         featured {
           childImageSharp {
-            fluid(maxWidth: 750) {
+            fluid(maxWidth: 850) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -29,7 +29,10 @@ export const query = graphql`
 const BlogPost = props => {
   return (
     <Layout>
-      <Metadata titl={props.data.markdownRemark.frontmatter.title} description = {props.data.markdownRemark.frontmatter.description} />
+      <Metadata
+        titl={props.data.markdownRemark.frontmatter.title}
+        description={props.data.markdownRemark.frontmatter.description}
+      />
       <div className={postSyles.content}>
         <h1>{props.data.markdownRemark.frontmatter.title}</h1>
         <span className={postSyles.meta}>
